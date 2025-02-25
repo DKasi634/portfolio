@@ -4,10 +4,10 @@ export default {
   theme: {
     extend: {
       colors:{
-        blue:'rgb(12, 56, 189)',
-        'blue-secondary':'rgb(17, 66, 219)',
-        'blue-variant':'rgb(12, 56, 189, 0.5)',
-        'blue-transparent':'rgb(12, 56, 189, 0.2)',
+        blue:'rgb(82, 86, 189)',
+        'blue-secondary':'rgb(87, 76, 219)',
+        'blue-variant':'rgb(82, 86, 189, 0.5)',
+        'blue-transparent':'rgb(82, 86, 189, 0.2)',
         dark:"rgb(36, 36, 36)",
 			  "dark-secondary":"rgb(52, 50, 51)",
 			  "dark-variant":"rgb(52, 50, 51, 0.5)",

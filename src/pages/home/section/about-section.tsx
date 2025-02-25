@@ -3,16 +3,16 @@ import { techStackElements } from "../../../constants/data";
 
 const AboutSection = () => {
     return (
-        <SectionContainer id="about" className="bg-gray-100 dark:bg-gray-900 py-8">
+        <SectionContainer id="about" className="bg-light py-8 my-8">
             <div className="container mx-auto px-4">
                 {/* Section Title */}
-                <h2 className="text-3xl font-bold text-center mb-2">About Me</h2>
+                <h2 className="text-3xl font-bold text-center ">About Me</h2>
 
                 {/* Content Grid */}
-                <div className="flex flex-col-reverse xl:flex-row gap-8 items-start pt-12">
+                <div className="flex flex-col-reverse xl:flex-row gap-8 items-start pt-4">
                     {/* Skills Section (Moved Here) */}
                     <div className="w-full xl:w-1/2 ">
-                        <h3 className="text-2xl font-bold my-4  w-full text-center inline-block xl:hidden">Skills</h3>
+                        <h3 className="text-xl font-semibold my-4  w-full text-center inline-block xl:hidden">The main technologies I use</h3>
                         <ul className="grid grid-cols-2 gap-4">
                             {techStackElements.map((skill, index) => (
                                 <li
@@ -35,15 +35,20 @@ const AboutSection = () => {
 
                     {/* About Content */}
                     <div className="w-full xl:w-1/2 flex flex-col items-start justify-start gap-4 pt-8 text-center">
-                        <p className="text-sm text-dark/80 font-semibold w-full text-center">
-                            I'm a passionate Web Developer with over 3 years of programming experience, including 2 years focused on web development. My journey began with a curiosity for problem-solving and evolved into a deep appreciation for creating scalable, user-friendly applications that make a real impact.
+                        <p className="text-sm text-dark/80 font-normal w-full text-center">
+                            I'm a passionate Web Developer with over 3 years of programming experience, including 2 years focused on web development. My journey began with a curiosity for problem-solving and evolved into a deep appreciation for creating scalable, user-friendly applications that solve real-world problems.
                         </p>
-                        <p className="text-sm text-dark/80 font-semibold w-full text-center">
-                            Over time, I've honed my skills in modern technologies such as JavaScript, TypeScript, React, Django, and TailwindCSS. These tools allow me to build robust and efficient solutions tailored to meet the needs of users and businesses alike.
-                            While much of my experience has been self-driven and independent, I'm eager to bring my skills to a collaborative environment where I can contribute to team projects and learn from others. I believe that teamwork fosters creativity and innovation, and I'm excited about the opportunity to grow alongside like-minded professionals.
+
+                        <p className="text-sm text-dark/80 font-normal w-full text-center">
+                            My expertise spans both <span className="font-extrabold">frontend</span> and <span className="font-extrabold">backend</span> web development. On the frontend, I specialize in crafting visually appealing and responsive interfaces using technologies like <span className="font-extrabold">HTML</span>, <span className="font-extrabold">CSS</span>, <span className="font-extrabold">JavaScript</span>, <span className="font-extrabold">TypeScript</span>, and <span className="font-extrabold">TailwindCSS</span>. For backend development, I leverage robust frameworks such as <span className="font-extrabold">Django</span> to build secure and efficient server-side logic.
                         </p>
-                        <p className="text-sm text-dark/80 font-semibold w-full text-center">
-                            Beyond coding, I enjoy exploring new technologies, experimenting with side projects.
+
+                        <p className="text-sm text-dark/80 font-normal w-full text-center">
+                            In addition to full-stack development, I have experience in <span className="font-extrabold">database management</span>, working with both <span className="font-extrabold">SQL</span> databases (such as <span className="font-extrabold">PostgreSQL</span> and <span className="font-extrabold">MySQL</span>) and <span className="font-extrabold">NoSQL</span> solutions like <span className="font-bold">Firebase</span>. This allows me to design and implement data-driven applications tailored to meet diverse business needs.
+                        </p>
+
+                        <p className="text-sm text-dark/80 font-normal w-full text-center">
+                            While much of my experience has been self-driven and independent, I'm eager to bring my skills to a collaborative environment where I can contribute to team projects and learn from others. I believe that teamwork fosters creativity and innovation, and I'm excited about all opportunities to grow.
                         </p>
                     </div>
                 </div>

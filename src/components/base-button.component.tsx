@@ -19,7 +19,7 @@ type BaseButtonProps = {
 }
 
 
-const BaseButton = ({ className = "", children, rounded = true, type = buttonType.blue, href, submitType="button", clickHandler = ()=>{}}: BaseButtonProps) => {
+const BaseButton = ({ className= "", children, rounded = true, type = buttonType.blue, href, submitType="button", clickHandler = ()=>{}}: BaseButtonProps) => {
 
   const renderButton = () => {
     const classNameValue = `${className} w-fit flex items-center text-sm font-medium justify-center px-8 py-[0.5rem] select-none border-[1.5px] ${rounded ? 'rounded-full' : 'rounded-lg'

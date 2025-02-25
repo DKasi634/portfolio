@@ -3,13 +3,14 @@ import { Project } from "../types"; // Define a type for projects
 import BaseButton from "./base-button.component";
 
 interface ProjectCardProps {
+    className?:string,
     project: Project;
 }
 
-const ProjectCard = ({ project }: ProjectCardProps) => {
+const ProjectCard = ({className="", project }: ProjectCardProps) => {
     return (
         <div
-            className="group block bg-light-variant border-2 cursor-pointer border-blue-transparent dark:bg-gray rounded-lg shadow-sm overflow-hidden hover:shadow-md transition duration-300 p-2"
+            className={`${className} group block bg-light-variant border-2 cursor-pointer border-blue-transparent dark:bg-gray rounded-lg shadow-sm overflow-hidden hover:shadow-md transition duration-300 p-2`}
         >
             {/* Image */}
             <div className="w-full h-48 border border-dark-transparent overflow-hidden rounded-md">
@@ -28,14 +29,14 @@ const ProjectCard = ({ project }: ProjectCardProps) => {
                 </h3>
 
                 {/* Description */}
-                <p className="text-sm text-dark/80 dark:text-light/80 line-clamp-3 w-full text-center">
+                <p className="text-sm text-dark/80 dark:text-light/80 line-clamp-4 w-full text-center">
                     {project.description}
                 </p>
 
                 {/* Action Button */}
                 <a href={project.link} target="_blank"
-                    rel="noopener noreferrer" className="w-fit h-fit mx-auto">
-                    <BaseButton className="!py-[0.4rem] !px-4 !text-xs font-bold" href={project.link}> View Project <LiaAngleRightSolid className="ml-2"/></BaseButton>
+                    rel="noopener noreferrer" className="w-fit h-fit mx-auto mt-8">
+                    <BaseButton className="!py-[0.4rem] !px-4 !text-xs font-bold"> View Project <LiaAngleRightSolid className="ml-2"/></BaseButton>
                 </a>
             </div>
         </div>

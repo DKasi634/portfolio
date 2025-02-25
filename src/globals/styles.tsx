@@ -1,8 +1,9 @@
 import styled, { keyframes } from "styled-components";
 
-const blue = 'rgb(12, 56, 189)'
-const blueSecondary = 'rgb(17, 66, 219)'
-const blueVariant = 'rgba(12, 56, 189, 0.5)'
+const blue = 'rgb(82, 86, 189)'
+const blueSecondary = 'rgb(87, 76, 219)'
+const blueVariant = 'rgba(82, 86, 189, 0.5)'
+
 
 
 export const NavLinksWrapper = styled.ul`
@@ -46,6 +47,20 @@ const slideInLeft = keyframes`
         opacity: 1;
     }
 `
+const slideInTop = keyframes`
+    from{
+        transform: translateY(0rem);
+        opacity: 0;
+    }to{
+        transform: translateY(-5rem);
+        opacity: 1;
+    }
+`
 export const NavDrawerWrapper = styled.div`
     animation: ${slideInLeft} 400ms ease-in-out forwards;
+`
+
+
+export const Toast = styled.p`
+    animation: ${slideInTop} 1s ease-in-out forwards;
 `

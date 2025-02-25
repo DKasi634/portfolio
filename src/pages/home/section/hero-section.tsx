@@ -23,15 +23,15 @@ const HeroSection = () => {
                             <BaseButton
                                 type={buttonType.clear}
                                 className="!text-blue  !border-blue !text-xs !font-bold hover:!border-blue hover:!bg-blue hover:!text-light hover:!font-bold"
-                                href="#portfolio"
+                                clickHandler={() => { window.location.href = "/#portfolio" }}
                             >
                                 View Projects
                             </BaseButton>
                             <BaseButton
                                 type={buttonType.dark} className="!text-xs !font-bold"
-                                href="#about"
+                                clickHandler={() => { window.location.href = "/#contact" }}
                             >
-                                Learn More About Me
+                                Contact Me
                             </BaseButton>
                         </div>
                     </div>
