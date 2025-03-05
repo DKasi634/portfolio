@@ -18,6 +18,7 @@ const ContactSection = () => {
   const TEMPLATE_ID = import.meta.env.VITE_EMAIL_JS_TEMPLATE_ID
   const SERVICE_ID = import.meta.env.VITE_EMAIL_JS_SERVICE_ID
   const PUBLIC_KEY = import.meta.env.VITE_EMAIL_JS_PUBLIC_KEY
+  console.error("The public key : ", PUBLIC_KEY);
 
   useEffect(()=>{
     if(submitMessage){
@@ -70,7 +71,7 @@ const ContactSection = () => {
       setSubmitMessage({message:"Message sent successfully!", type:"success"});
       setFormData({ name: "", email: "", message: "" }); // Reset form fields
     } catch (error) {
-      console.error("Error sending message:", error, "\n With public key : ", PUBLIC_KEY);
+      // console.error("Error sending message:", error, "\n With public key : ", PUBLIC_KEY);
       setSubmitMessage({message:"Failed to send message. Please try again later", type:"error"});
     } finally {
       setLoading(false); // Reset loading state
