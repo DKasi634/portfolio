@@ -10,7 +10,7 @@ interface ProjectCardProps {
 const ProjectCard = ({className="", project }: ProjectCardProps) => {
     return (
         <div
-            className={`${className} group block bg-light-variant border-2 cursor-pointer border-blue-transparent dark:bg-gray rounded-lg shadow-sm overflow-hidden hover:shadow-md transition duration-300 p-2`}
+            className={`${className} group block bg-light-variant border-2 cursor-pointer border-blue-transparent rounded-lg shadow-sm overflow-hidden hover:shadow-md transition duration-300 p-2`}
         >
             {/* Image */}
             <div className="w-full h-48 border border-dark-transparent overflow-hidden rounded-md">
