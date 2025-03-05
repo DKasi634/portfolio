@@ -15,6 +15,10 @@ const ContactSection = () => {
   const [loading, setLoading] = useState(false); // Track loading state
   const [submitMessage, setSubmitMessage] = useState<{type:"error"|"success", message:string}|null>(null)
 
+  const TEMPLATE_ID = import.meta.env.VITE_EMAIL_JS_TEMPLATE_ID
+  const SERVICE_ID = import.meta.env.VITE_EMAIL_JS_SERVICE_ID
+  const PUBLIC_KEY = import.meta.env.VITE_EMAIL_JS_PUBLIC_KEY
+
   useEffect(()=>{
     if(submitMessage){
       const timer = setTimeout(()=>{
@@ -45,28 +49,28 @@ const ContactSection = () => {
     try {
       // Validate form data
       if (!formData.name || !formData.email || !formData.message) {
-        alert("Please fill out all fields.");
+        setSubmitMessage({message:"Please fill out all form fields ", type:"error"})
         setLoading(false);
         return;
       }
 
       // Send email using EmailJS
       await emailjs.send(
-        import.meta.env.VITE_EMAIL_JS_SERVICE_ID, // Replace with your EmailJS service ID
-        import.meta.env.VITE_EMAIL_JS_TEMPLATE_ID, // Replace with your EmailJS Template ID
+        SERVICE_ID, // Replace with your EmailJS service ID
+        TEMPLATE_ID, // Replace with your EmailJS Template ID
         {
           from_name: formData.name,
           from_email: formData.email,
           message: formData.message,
         },
-        import.meta.env.VITE_EMAIL_JS_PUBLIC_KEY // Replace with your EmailJS user ID
+        PUBLIC_KEY // Replace with your EmailJS user ID
       );
 
       // Show success message
       setSubmitMessage({message:"Message sent successfully!", type:"success"});
       setFormData({ name: "", email: "", message: "" }); // Reset form fields
     } catch (error) {
-      console.error("Error sending message:", error);
+      console.error("Error sending message:", error, "\n With public key : ", PUBLIC_KEY);
       setSubmitMessage({message:"Failed to send message. Please try again later", type:"error"});
     } finally {
       setLoading(false); // Reset loading state
@@ -146,9 +150,11 @@ const ContactSection = () => {
               </BaseButton>
 
               {/* Success Message */}
-              {submitMessage && (
-                <Toast className={`${submitMessage.type === "success" ? "bg-green-500":"bg-red-500"} text-light text-xs text-center mt-4 fixed -bottom-[1rem] left-1/2 -translate-x-1/2 px-8 py-3 rounded-md`}>{submitMessage.message}</Toast>
-              )}
+              { submitMessage &&
+                <Toast className={`w-full fixed -bottom-[1rem] left-0 right-0  px-8 py-3 bg-transparent flex items-center justify-center`}>
+                   <p className={` ${submitMessage.type === "success" ? "bg-green-500":"bg-red-500"} text-light text-xs w-full max-w-[20rem] text-center mx-auto  px-8 py-3 rounded-md`}>{submitMessage.message}</p> 
+                   </Toast>
+              }
               {/* <p className={`bg-green-500 text-light text-xs text-center mt-4 -translate-y-[5rem] fixed -bottom-[1rem] left-1/2 -translate-x-1/2 px-8 py-3 rounded-md`}>Something</p> */}
             </form>
           </div>

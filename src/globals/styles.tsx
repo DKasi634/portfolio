@@ -61,6 +61,6 @@ export const NavDrawerWrapper = styled.div`
 `
 
 
-export const Toast = styled.p`
+export const Toast = styled.div`
     animation: ${slideInTop} 1s ease-in-out forwards;
 `
