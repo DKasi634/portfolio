@@ -37,7 +37,7 @@ const TopNavigation = () => {
             <nav className="z-[50] fixed inset-x-0 w-full top-0 shadow-dark-transparent shadow-sm bg-light/40 backdrop-blur-2xl flex items-center justify-center px-16 py-4 h-[5rem]">
                 <div className="flex items-center justify-between gap-4 w-full">
                     <aside className="left w-[30%]">
-                        <Link to={"/"} onClick={()=>{ if(!location.pathname) window.location.href = `/#` }} className="font-sassy logo cursor-pointer text-5xl font-bold text-blue">.Daniel</Link>
+                        <Link to={"/"} onClick={()=>{ if(!location.pathname) window.location.href = `/#` }} className="font-sassy logo cursor-pointer text-5xl font-bold text-blue">.Dan</Link>
                     </aside>
                     <aside className="hidden w-[70%] lg:flex items-center justify-between gap-4 xl:pr-8">
                         <NavLinksWrapper className="flex w-1/2 items-center justify-center gap-2 py-4">

@@ -29,7 +29,7 @@ const ProjectCard = ({className="", project }: ProjectCardProps) => {
                 </h3>
 
                 {/* Description */}
-                <p className="text-sm text-dark/80 dark:text-light/80 line-clamp-4 w-full text-center">
+                <p className="text-sm text-dark  line-clamp-4 w-full text-center">
                     {project.description}
                 </p>
 
