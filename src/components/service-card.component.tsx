@@ -15,7 +15,7 @@ const ServiceCard = ({ service , className="" }: ServiceCardProps) => {
       <h3 className="text-xl font-bold mb-2">{service.name}</h3>
 
       {/* Description */}
-      <p className="text-sm text-gray-600 dark:text-gray-400">
+      <p className="text-sm text-gray-600 dark:text-gray-400 line-clamp-3">
         {service.description}
       </p>
     </div>

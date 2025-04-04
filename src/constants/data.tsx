@@ -21,7 +21,7 @@ import VawulensImage from "../assets/screenshots/vawulens-screenshot.png"
 import { ContactItem, Project, Service } from "../types";
 import { BiLogoWhatsapp } from "react-icons/bi";
 import { FaCode, FaDatabase, FaServer, FaChartLine } from "react-icons/fa";
-import { CiSettings } from "react-icons/ci";
+// import { CiSettings } from "react-icons/ci";
 import { IoLogoGithub } from "react-icons/io5";
 
 type navMenuItem = {
@@ -158,7 +158,7 @@ export const servicesData: Service[] = [
   {
     name: "Frontend Development",
     description:
-      "I create visually appealing and responsive user interfaces using modern technologies like React JS inluding HTML, CSS, JavaScript, TypeScript, and TailwindCSS",
+      "I create visually appealing and responsive user interfaces using modern technologies like React JS, TypeScript, and TailwindCSS",
     icon: <FaCode className="text-4xl" />,
   },
   {
@@ -179,10 +179,10 @@ export const servicesData: Service[] = [
       "I optimize web applications for speed, security, and scalability, ensuring they perform well under load.",
     icon: <FaChartLine className="text-4xl" />,
   },
-  {
-    name: "System Integration",
-    description:
-      "I integrate third-party services and APIs into your projects to enhance functionality and streamline processes.",
-    icon: <CiSettings className="text-4xl" />,
-  },
+  // {
+  //   name: "System Integration",
+  //   description:
+  //     "I integrate third-party services and APIs into your projects to enhance functionality and streamline processes.",
+  //   icon: <CiSettings className="text-4xl" />,
+  // },
 ];
